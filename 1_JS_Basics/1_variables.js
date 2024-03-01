@@ -78,11 +78,14 @@ console.log('The value of the variable primitive is: ' + primitive);
 // All your efforts would be in vain. So what's the Catch 22? No need to 
 // change them, simply _replace_ them.
 
-primitive = 'I am so primitive.';
+primitive ='I am no so primitive.';
 console.log(primitive);
 
 // Assign the new string 'I am no longer primitive. I am making progress!'
 // to primitive and print it to console.
+
+primitive ='I am no longer primitive. I am making progress!';
+console.log(primitive);
 
 // Technical Note! Before I said that primitive types are immutable and not
 // objects. While this is true, in JavaScript primitives are often wrapped in 
@@ -139,7 +142,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Strings
 
-
+morpho = 'I am a string.';
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -148,6 +151,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // A one-type character string is also a string. Other languages have
 // the type 'char' for this special case, but not JS.
 
+morpho = 'a';
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -155,11 +159,13 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // False.
 
+morpho = false;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // True.
 
+morpho = true;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -167,11 +173,13 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Undefined.
 
+morpho = undefined;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Null
 
+morpho = null;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -183,15 +191,15 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // Bigints represent whole numbers larger than 2^53 - 1. You probably won't 
 // use them a lot.
 
-
+morpho = 2**53;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Symbols are variables that guaranteed to be unique. You probably won't 
 // use them a lot.
 
-
-console.log('Morpho: ' + morpho);
+morpho = Symbol('morpho');
+// console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 
