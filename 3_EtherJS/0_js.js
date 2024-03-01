@@ -35,8 +35,8 @@
 // be executed, until you tell the process to stop. 
 
 // This line will tell the process to stop.
-process.exit(0);
-console.log('I am a sad line...I will not be printed to console :(');
+// process.exit(0);
+// console.log('I am a sad line...I will not be printed to console :(');
 
 // a. Move the sad line above and below `process.exit(0);` to check that the
 // process stops where it is intended to. When you are done, comment out both
@@ -47,9 +47,16 @@ console.log('I am a sad line...I will not be printed to console :(');
 // Hint: never created a function in JS? Check this page:
 // https://javascript.info/function-basics
 
+function exit() {
+    console.log('Exercise ' + exercise + ' ended');
+  process.exit(0);
+}
+
 // Hint: German keyboard curly brackets: Alt-gr-7 (open), Alt-gr-8 (close).
 
 let exercise = 0;
+
+exit();
 
 // Your code here!
 
@@ -88,4 +95,4 @@ exercise = 1;
 
 require('dotenv').config();
 
-// exit();
+exit();
