@@ -33,16 +33,23 @@ brendan = {
     year: 1961
 };
 
-// persons = ...
+persons = [brendan,
+            {first: 'Pablo', last: 'Picasso', year: 1881},
+            {first: 'Napoleon', last: 'Bonaparte', year: 1769}];
 
 // b. Count how many elements are in the array.
 // Hint: Use the .length property.
+numberOfElements = persons.length;
+console.log(`The array persons has ${numberOfElements} elements.`);
 
 // EXERCISE 2. Accessing items inside arrays.
 /////////////////////////////////////////////
 
 // Access the second element of the array and create a string of the type: 
 // 'X was born in Y'.
+
+secondElement = persons[1];
+console.log(secondElement.first + ' ' + secondElement.last + ' was born in ' + secondElement.year + '.');
 
 // Hint: arrays are 0-indexed, that is the first element has index 0,
 // the second element 1, and so on.
@@ -52,12 +59,15 @@ brendan = {
 
 // Repeat exercise 2, but this time you pick a random item from the array.
 
+randomElement = persons[Math.floor(Math.random() * persons.length)];
+console.log(randomElement.first + ' ' + randomElement.last + ' was born in ' + randomElement.year + '.');
+
 // Hint. Generate a random number between 0 and the total
 // number of elements in the array, then "floor" it with the corresponding
 // method of the Math object.
 
 // randomNumber = ... 
-console.log(persons[randomNumber]);
+// console.log(persons[randomNumber]);
 
 // EXERCISE 4. Add a new element to the array of persons.
 //////////////////////////////////////////////////////////
@@ -71,6 +81,8 @@ console.log(persons[randomNumber]);
 // you would like to add the element. For instance the method `push`
 // will add at the bottom of the array.
 
+persons.push({first: 'Phil', last: 'Katz', year: 1962});
+
 // Verify that you added at the bottom.
 console.log(persons[3]);
 
@@ -80,6 +92,8 @@ console.log(persons[3]);
 // Maybe you hurried too much with Phil Katz. What about
 // replacing him with Linus Torvalds (1969) instead?
 // Hint: simply assign a new value at a given array index.
+
+persons[3] = {first: 'Linus', last: 'Torvalds', year: 1969};
 
 // Verify who is the bottom of the array.
 console.log(persons[3]);
@@ -94,6 +108,8 @@ console.log(persons[3]);
 // Hint: the method `splice` modifies the original array and returns the
 // removed elements.
 
+persons.splice(1, 2);
+
 // Verify the content of the updated array.
 console.log(persons);
 
@@ -105,6 +121,7 @@ console.log(persons);
 // Hint: in loose type comparisons 0 == false.
 
 myArray = [];
+console.log(myArray == false);
 
 
 //////////////////////////////

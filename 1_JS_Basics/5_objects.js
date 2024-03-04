@@ -43,12 +43,22 @@ console.log(typeof null);
 // Hint. The property name must contain the full name (Brendan Eich), and
 // the property birth must contain the year in which he was born (1961).
 
+objPerson = {
+    name: 'Brendan Eich',
+    birth: 1961
+};
+
 // b. Access the properties of the person object and create a sentence of the
 // type: "X was born in Y." where X is Brendan Eich and Y is 1961.
 
-// c. Bonus exercise. Instead of saying that year of birth, you could say that
-// Brendan Eich is Z years old.  
+console.log(objPerson.name + ' was born in ' + objPerson.birth + '.');
 
+// c. Bonus exercise. Instead of saying that year of birth, you could say that
+// Brendan Eich is Z years old. 
+
+year = new Date().getFullYear();
+
+console.log(objPerson.name + ' is ' + (year - objPerson.birth) + ' years old.');
 
 // EXERCISE 2. Add and remove properties to the person object.
 //////////////////////////////////////////////////////
@@ -56,6 +66,9 @@ console.log(typeof null);
 // Now you realize that it makes more sense to split the property 'name' into
 // two: 'first' and 'last' name. Accordingly you delete the propery name.
 
+objPerson.first = 'Brendan';
+objPerson.last = 'Eich';
+delete objPerson.name;
 
 
 // EXERCISE 3. Bonus. Constant objects.
