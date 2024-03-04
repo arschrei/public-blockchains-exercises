@@ -21,6 +21,10 @@ persons = [
     { first: 'Linus', last: 'Torvalds', year: 1962 }
 ];
 
+for (let i = 0; i < persons.length; i++) {
+    console.log(persons[i].year);
+}
+
 
 
 // EXERCISE 2. Verbose Loop.
@@ -35,6 +39,23 @@ persons = [
 // you loop through the items in the array.
 // Hint2: You will also need some if logic to correctly add or not the comma
 // between the first and the second element and finishing with a dot.
+persons = [
+    { first: 'Brendan', last: 'Eich', year: 1961 },
+    { first: 'Pablo', last: 'Picasso', year: 1881 },
+    { first: 'Napoleon', last: 'Bonaparte', year: 1821 },
+    { first: 'Linus', last: 'Torvalds', year: 1962 }
+];
+
+let paragraph = 'There are ' + persons.length + ' elements in the array: ';
+for (let i = 0; i < persons.length; i++) {
+    paragraph += 'element ' + (i + 1) + ' is ' + persons[i].first + ' ' + persons[i].last + ', born in ' + persons[i].year;
+    if (i < persons.length - 1) {
+        paragraph += ', ';
+    } else {
+        paragraph += '.';
+    }
+}
+console.log(paragraph);
 
 // b. bonus. Can you replace the part "element 1" with "the first element" and
 // "element 2" with the "second element" and so on?
@@ -58,6 +79,12 @@ persons = [
 // Hint: in this exercise objects behave like arrays, but instead of a
 // numeric index, you use the property name.
 
+obj = { first: 'Brendan', last: 'Eich', year: 1961 };
+for (let property in obj) {
+    if (obj.hasOwnProperty(property)) {
+        console.log(property + ': ' + obj[property]);
+    }
+}
 
 //////////////////////////////
 // You finished this sheet! //
