@@ -16,8 +16,11 @@ const path = require('path');
 
 // Hint: As you did in file 1_wallet.
 
-// Your code here!
+pathToDotEnv = path.join(__dirname, '..', '.env');
+// console.log(pathToDotEnv);
+require("dotenv").config({ path: pathToDotEnv });
 
+const ethers = require("ethers");
 
 // Exercise 1. Connect to Mainnet (a.k.a welcome async!).
 /////////////////////////////////////////////////////////
@@ -46,7 +49,7 @@ const path = require('path');
 // parameters it needs (nested hint: you need something from the .env file).
 
 
-// Your code here!
+
 
 
 // b. Verify that the network's name is "mainnet" and the chain id is 1.

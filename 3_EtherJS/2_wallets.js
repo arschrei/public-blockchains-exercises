@@ -20,6 +20,11 @@ const ethers = require("ethers");
 // and the mnenomic phrase.
 // Hint: ethers.Wallet.createRandom();
 
+wallet = ethers.Wallet.createRandom();
+console.log("Address:", wallet.address);
+console.log("Private key:", wallet.privateKey);
+console.log("Mnemonic phrase:", wallet.mnemonic.phrase);
+
 
 // exit();
 
@@ -40,8 +45,6 @@ let baseDevPath = "m/44'/60'/0'/0/";
 
 console.log("Derivation path:", wallet.path);
 
-// Your code here!
-
 
 // exit();
 
@@ -55,6 +58,14 @@ exercise = 2;
 // finally print the first 10 addresses and private keys generated.
 // Hint: You need to append an index to the derivation path.
 
-// Your code here!
+let mnemonic = wallet.mnemonic.phrase;
+
+let path, myWallet;
+for (let i = 0; i < 10; i++) {
+  path = `${baseDevPath}${i}`;
+  myWallet = ethers.HDNodeWallet.fromPhrase(mnemonic, path);
+  console.log("Address", i, myWallet.address);
+  console.log("Private key", i, myWallet.privateKey);
+}
 
 // exit();
