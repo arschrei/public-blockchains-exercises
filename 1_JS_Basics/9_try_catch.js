@@ -34,7 +34,15 @@ console.log(typeof NaN);
 // a special return value with a warning on console.log.
 
 function divideNumbers(a, b) {
-    // Your code here.
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        console.log('Invalid input parameters.');
+        return;
+    }
+    else if (b === 0) {
+        console.log('Division by zero.');
+        return;
+    }
+    else return a / b;
 }
 
 divideNumbers('what', {});
@@ -64,7 +72,15 @@ judgePerson(brendan);
 // we catch it with a try and catch statement and print an error message.
 
 function judgePerson(person, cb) {
-    // Your code here.
+    let str;
+    try {
+        str = person.first + ' ' + person.last + cb()
+    }
+    catch (e) {
+        console.log('Error: ' + e.message);
+        return;
+    }
+    console.log(str);
 }
 
 brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
